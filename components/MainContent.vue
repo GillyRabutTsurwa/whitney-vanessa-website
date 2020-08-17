@@ -1,0 +1,40 @@
+<template>
+  <div id="app">
+    <Slider />
+  </div>
+</template>
+
+<script>
+// import Navigation from "./Navigation";
+// import Slider from "";
+
+export default {
+  components: {
+    // Navigation: Navigation,
+    // Slider: Slider,
+  }
+};
+</script>
+
+<style lang="scss">
+// @import "./App.css";
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
