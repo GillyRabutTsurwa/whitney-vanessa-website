@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <Slider />
+    <SectionTitle titleProp="About Whitney Vanessa" />
+    <FirstSection />
   </div>
 </template>
 
 <script>
-// import Navigation from "./Navigation";
-// import Slider from "";
+import SectionTitle from "~/components/shared/SectionTitle";
+import FirstSection from "~/components/FirstSection";
 
 export default {
   components: {
-    // Navigation: Navigation,
-    // Slider: Slider,
+    SectionTitle: SectionTitle,
+    FirstSection: FirstSection
   }
 };
 </script>

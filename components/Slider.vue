@@ -46,27 +46,19 @@ export default {
   methods: {
     next() {
       this.currentIndex += 1;
-      // if (this.currentIndex > this.images.length - 1) {
-      //   this.currentIndex = 0;
-      // }
     },
     prev() {
       this.currentIndex -= 1;
     },
     startSlide() {
-      // NOTE: timer variable ne fait rien en fait.
-      // this.timer = setInterval(this.next, 4000);
       setInterval(this.next, 6000);
     },
     toggleNav() {
       this.navShowing = !this.navShowing;
-      console.log("I WAS LIKCSED")
     }
   },
   computed: {
     currentImg: function() {
-      //TESTING:
-      // return this.images[this.currentIndex];
       return this.images[Math.abs(this.currentIndex) % this.images.length];
     },
     setBackgroundImage: function() {
@@ -90,7 +82,7 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  height: 93vh;
+  height: 100vh;
 }
 
 .heading {
@@ -114,19 +106,8 @@ export default {
   background-size: cover;
   background-position: center;
   position: relative;
-  // background-image: linear-gradient(
-  //     105deg,
-  //     rgba(255, 255, 255, 0.9) 0%,
-  //     rgba(255, 255, 255, 0.9) 50%,
-  //     transparent 50%
-  //   ),
-  //   url(../assets/img/nikita-tikhomirov-unsplash.jpg);
+  background-attachment: fixed;
 }
-
-/* .myImg {
-  width: 100%;
-  height: 100%;
-} */
 
 .fade-enter-active {
   animation-name: fadeEnter;
