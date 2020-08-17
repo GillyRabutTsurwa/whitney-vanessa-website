@@ -7,7 +7,7 @@
       </div>
     </transition-group>
 
-    <div v-if="!navShowing" class="heading">
+    <div v-if="!navShowing" class="heading appear">
       <h1>{{currentGreeting}}</h1>
       <h3>Welcome to My Site</h3>
       <Bouton>
@@ -15,7 +15,7 @@
       </Bouton>
     </div>
 
-    <Navigation v-else />
+    <Navigation v-else class="appear" />
   </div>
 </template>
 
@@ -143,6 +143,10 @@ export default {
   position: absolute;
 }
 
+.appear {
+  animation: appear 1s;
+}
+
 @keyframes fadeEnter {
   from {
     opacity: 0;
@@ -156,6 +160,12 @@ export default {
     opacity: 1;
   }
   to {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
     opacity: 0;
   }
 }
