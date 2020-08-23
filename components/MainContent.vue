@@ -3,17 +3,21 @@
     <Slider />
     <SectionTitle titleProp="About Whitney Vanessa" />
     <FirstSection />
+    <SectionTitle titleProp="Yet Even More" />
+    <SecondSection />
   </div>
 </template>
 
 <script>
 import SectionTitle from "~/components/shared/SectionTitle";
 import FirstSection from "~/components/FirstSection";
+import SecondSection from "~/components/SecondSection";
 
 export default {
   components: {
     SectionTitle: SectionTitle,
-    FirstSection: FirstSection
+    FirstSection: FirstSection,
+    SecondSection: SecondSection
   }
 };
 </script>

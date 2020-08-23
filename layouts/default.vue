@@ -36,6 +36,10 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
